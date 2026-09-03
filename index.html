@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Victor Schumann Macário - Resume</title>
+<title>Victor Schumann Macário - Resume &amp; Projects</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,11 +11,18 @@
   <h1>Victor Schumann Macário</h1>
   <p class="location">Leiria, Portugal · (+351) 910 998 817</p>
   <p class="links">
-    <a href="mailto:contact@victorschumann.com">contact@victorschumann.com</a> · 
-    <a href="https://linkedin.com/in/victor-schumann" target="_blank">linkedin.com/in/victor-schumann</a> · 
-    <a href="https://github.com/victor-schumann" target="_blank">github.com/victor-schumann</a>
+    <a href="mailto:contact@victorschumann.com">contact@victorschumann.com</a> ·
+    <a href="https://linkedin.com/in/victor-schumann" target="_blank" rel="noopener">linkedin.com/in/victor-schumann</a> ·
+    <a href="https://github.com/victor-schumann" target="_blank" rel="noopener">github.com/victor-schumann</a>
   </p>
 </header>
+
+<nav class="tabs" aria-label="Sections">
+  <button class="tab-btn active" data-tab="resume" onclick="showTab('resume', this)">Resume</button>
+  <button class="tab-btn" data-tab="projects" onclick="showTab('projects', this)">Projects</button>
+</nav>
+
+<div id="resume" class="tab-panel active">
 
 <section>
   <h2>Skills</h2>
@@ -23,8 +30,8 @@
     <li><strong>Python:</strong> 3.9+, Odoo 16+ (ORM, QWeb, OWL, server actions, workflows)</li>
     <li><strong>JavaScript:</strong> Vue.js, Flutter (Dart), AngularJS</li>
     <li><strong>Backend:</strong> FastAPI, RESTful APIs, PostgreSQL, MongoDB</li>
-    <li><strong>DevOps & Tools:</strong> Docker, Git/GitLab, Linux / Bash, CI/CD pipelines, Odoo.sh, Cloudpepper</li>
-    <li><strong>Testing:</strong> Pytest (unit & integration), TDD principles</li>
+    <li><strong>DevOps &amp; Tools:</strong> Docker, Git/GitLab, Linux / Bash, CI/CD pipelines, Odoo.sh, Cloudpepper</li>
+    <li><strong>Testing:</strong> Pytest (unit &amp; integration), TDD principles</li>
     <li><strong>Other:</strong> Agile, API integrations, access control, clean code practices</li>
   </ul>
 </section>
@@ -35,7 +42,7 @@
   <div class="job">
     <div class="job-header">
       <h3>Odoo Developer</h3>
-      <span class="date">Apr 2026 – Present · LTECH A/S — Ballerup, Denmark (Remote)</span>
+      <span class="date">Apr 2026 – Present · LTECH A/S, Ballerup, Denmark (Remote)</span>
     </div>
     <ul>
       <li>Develop custom Odoo modules for core ERP processes: sales, inventory, accounting, and manufacturing.</li>
@@ -48,7 +55,7 @@
   <div class="job">
     <div class="job-header">
       <h3>Python / Odoo Developer</h3>
-      <span class="date">Apr 2023 – Apr 2026 · Arxi / Bethera — Portugal</span>
+      <span class="date">Apr 2023 – Apr 2026 · Arxi / Bethera, Portugal</span>
     </div>
     <ul>
       <li>Developed custom Odoo modules for core ERP processes: sales, inventory, accounting, and manufacturing.</li>
@@ -61,7 +68,7 @@
   <div class="job">
     <div class="job-header">
       <h3>Junior Angular Developer</h3>
-      <span class="date">Sep 2022 – Apr 2023 · NINC — Remote</span>
+      <span class="date">Sep 2022 – Apr 2023 · NINC, Remote</span>
     </div>
     <ul>
       <li>Developed and maintained AngularJS frontend components using TypeScript.</li>
@@ -72,35 +79,170 @@
 
 <section>
   <h2>Key Projects</h2>
-
-  <p>
-    <strong>FlyByOdoo SaaS Platform</strong> · Dec 2025 – Present<br>
-    Python · Odoo Community · SaaS · <a href="https://www.flybyodoo.pt/" target="_blank">flybyodoo.pt</a>
+  <p class="proj-pointer">
+    <a href="#" onclick="gotoProject('flybyodoo'); return false;">FlyByOdoo</a> (Odoo SaaS, 2025–) ·
+    <a href="#" onclick="gotoProject('kioda'); return false;">Kioda &amp; Bework</a> (Flutter MRP apps, 2023–24) ·
+    <a href="#" onclick="gotoProject('therabox'); return false;">Therabox</a> (FastAPI / Vue.js health platform, 2023).
+    Screens and details in the <a href="#" onclick="gotoTab('projects'); return false;">Projects</a> tab.
   </p>
-  <ul>
+</section>
+
+</div>
+
+<div id="projects" class="tab-panel">
+
+<nav class="subtabs" aria-label="Projects">
+  <button class="sub-btn active" data-sub="flybyodoo" onclick="showSub('flybyodoo', this)">FlyByOdoo</button>
+  <button class="sub-btn" data-sub="kioda" onclick="showSub('kioda', this)">Kioda</button>
+  <button class="sub-btn" data-sub="therabox" onclick="showSub('therabox', this)">Therabox</button>
+</nav>
+
+<section id="proj-flybyodoo" class="proj active">
+  <div class="proj-head">
+    <img class="proj-logo" src="assets/flybyodoo/logo.svg" alt="FlyByOdoo">
+    <div>
+      <h3>FlyByOdoo SaaS Platform</h3>
+      <p class="meta">Dec 2025 – Present · Python · Odoo Community · SaaS · <a href="https://www.flybyodoo.pt/" target="_blank" rel="noopener">flybyodoo.pt</a></p>
+    </div>
+  </div>  <figure class="hero">
+    <img src="assets/flybyodoo/apps.png" alt="FlyByOdoo app launcher on laptop and phone" loading="lazy">
+    <figcaption>App launcher: the module set each tenant picks from, on desktop and phone.</figcaption>
+  </figure>
+  <div class="grid">
+    <figure><img src="assets/flybyodoo/crm.png" alt="CRM contacts list" loading="lazy"><figcaption>CRM and contacts</figcaption></figure>
+    <figure><img src="assets/flybyodoo/contacts.png" alt="Company form" loading="lazy"><figcaption>Company and tax setup</figcaption></figure>
+    <figure><img src="assets/flybyodoo/website.png" alt="Website builder storefront" loading="lazy"><figcaption>Website builder</figcaption></figure>
+    <figure><img src="assets/flybyodoo/project.png" alt="Project tasks" loading="lazy"><figcaption>Projects and tasks</figcaption></figure>
+  </div>
+  <p class="blurb">Hosted Odoo Community for Portuguese SMEs: one isolated instance per customer, AT-certified invoicing, pay-as-you-grow users and modules.</p>
+  <ul class="role">
     <li>Contributed to Odoo-based SaaS for European PMEs, focused on inventory and invoicing (AT-certified) modules.</li>
     <li>Developed backend customizations and cloud deployment features for scalable multi-tenant Odoo instances.</li>
     <li>Ensured compliance with Portuguese tax requirements and secure access from any device.</li>
   </ul>
+</section>
 
-  <p>
-    <strong>Kioda & Bework Mobile MRP Apps</strong> · Dec 2023 – Mar 2024<br>
-    Python · Flutter · Odoo · <a href="https://www.kioda.pt/en_US" target="_blank">kioda.pt</a>
-  </p>
-  <ul>
+<section id="proj-kioda" class="proj">
+  <div class="proj-head">
+    <img class="proj-logo" src="assets/kioda/logo.png" alt="Kioda">
+    <div>
+      <h3>Kioda &amp; Bework Mobile MRP Apps</h3>
+      <p class="meta">Dec 2023 – Mar 2024 · Python · Flutter · Odoo · <a href="https://www.kioda.pt/en_US" target="_blank" rel="noopener">kioda.pt</a></p>
+    </div>
+  </div>  <figure class="hero">
+    <img src="assets/kioda/screens.png" alt="Kioda tablet screens: quality, machine board, OEE, machine terminal" loading="lazy">
+    <figcaption>Tablet screens: quality queue, 16-machine status board, OEE dashboard, machine terminal.</figcaption>
+  </figure>
+  <div class="grid">
+    <figure><img src="assets/kioda/tablet-phone.jpg" alt="Machine terminal on tablet and phone" loading="lazy"><figcaption>Machine terminal on tablet and phone</figcaption></figure>
+    <figure><img src="assets/kioda/kiosks.jpg" alt="Factory floor kiosks" loading="lazy"><figcaption>Factory-floor kiosks</figcaption></figure>
+    <figure class="wide"><img src="assets/kioda/factory.png" alt="Production flow from development to shipping" loading="lazy"><figcaption>Flow the apps track: development, production, packaging, shipping</figcaption></figure>
+  </div>
+  <p class="blurb">Industry 4.0 kiosks and dashboards for the factory floor: machine terminals, OEE, quality checks and production boards, fed by Odoo MRP.</p>
+  <ul class="role">
     <li>Built Flutter mobile applications with real-time Odoo ERP data synchronization.</li>
     <li>Handled MRP (material requirements planning) logic and offline capabilities.</li>
   </ul>
+</section>
 
-  <p>
-    <strong>Therabox Health Platform</strong> · Sep 2023 – Dec 2023<br>
-    FastAPI · Vue.js · MongoDB · <a href="https://www.therabox.net/en_GB" target="_blank">therabox.net</a>
-  </p>
-  <ul>
+<section id="proj-therabox" class="proj">
+  <div class="proj-head">
+    <img class="proj-logo" src="assets/therabox/logo.png" alt="Therabox">
+    <div>
+      <h3>Therabox Health Platform</h3>
+      <p class="meta">Sep 2023 – Dec 2023 · FastAPI · Vue.js · MongoDB · <a href="https://www.therabox.net/en_GB" target="_blank" rel="noopener">therabox.net</a></p>
+    </div>
+  </div>  <figure class="hero">
+    <img src="assets/therabox/calendar.png" alt="Therabox appointment calendar on tablet" loading="lazy">
+    <figcaption>Appointment calendar: rooms, therapists and recurring bookings.</figcaption>
+  </figure>
+  <div class="grid">
+    <figure><img src="assets/therabox/clinical.png" alt="Clinical process with body chart" loading="lazy"><figcaption>Clinical process with body-chart notes</figcaption></figure>
+    <figure><img src="assets/therabox/menu.jpg" alt="Therabox home menu" loading="lazy"><figcaption>Home menu: agenda, patients, invoicing, marketing</figcaption></figure>
+    <figure class="wide"><img src="assets/therabox/desk.jpg" alt="Therabox on a laptop" loading="lazy"><figcaption>Browser-based, any device</figcaption></figure>
+  </div>
+  <p class="blurb">Cloud clinic management for therapists: scheduling, clinical records, certified invoicing, patient communication and reporting in one place.</p>
+  <ul class="role">
     <li>Developed backend APIs and frontend components for modular health application.</li>
     <li>Implemented secure authentication flows and data validation / integrity checks.</li>
   </ul>
 </section>
 
+
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <button class="lb-nav lb-prev" onclick="event.stopPropagation(); stepLightbox(-1)" aria-label="Previous">&#8249;</button>
+  <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation(); stepLightbox(1)">
+  <button class="lb-nav lb-next" onclick="event.stopPropagation(); stepLightbox(1)" aria-label="Next">&#8250;</button>
+  <div id="lightbox-cap" class="lightbox-cap"></div>
+</div>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+    document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+    try { localStorage.setItem('cv-tab', id); } catch (e) {}
+  }
+  function gotoTab(id) {
+    var btn = document.querySelector('.tab-btn[data-tab="' + id + '"]');
+    if (btn) { showTab(id, btn); window.scrollTo(0, 0); }
+  }
+  function showSub(id, btn) {
+    document.querySelectorAll('.proj').forEach(function (p) { p.classList.remove('active'); });
+    document.querySelectorAll('.sub-btn').forEach(function (b) { b.classList.remove('active'); });
+    document.getElementById('proj-' + id).classList.add('active');
+    btn.classList.add('active');
+    try { localStorage.setItem('cv-sub', id); } catch (e) {}
+  }
+  function gotoProject(id) {
+    gotoTab('projects');
+    var btn = document.querySelector('.sub-btn[data-sub="' + id + '"]');
+    if (btn) { showSub(id, btn); }
+  }
+  var lbImgs = [], lbIndex = 0;
+  function renderLightbox() {
+    var img = lbImgs[lbIndex];
+    var cap = img.parentNode.querySelector('figcaption');
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox-cap').textContent = (cap ? cap.textContent : '') + '  (' + (lbIndex + 1) + '/' + lbImgs.length + ')';
+  }
+  function openLightbox(img) {
+    lbImgs = Array.prototype.slice.call(img.closest('.proj').querySelectorAll('figure img'));
+    lbIndex = lbImgs.indexOf(img);
+    renderLightbox();
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function stepLightbox(d) {
+    if (!lbImgs.length) { return; }
+    lbIndex = (lbIndex + d + lbImgs.length) % lbImgs.length;
+    renderLightbox();
+  }
+  function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', function (e) {
+    if (!document.getElementById('lightbox').classList.contains('open')) { return; }
+    if (e.key === 'Escape') { closeLightbox(); }
+    if (e.key === 'ArrowRight') { stepLightbox(1); }
+    if (e.key === 'ArrowLeft') { stepLightbox(-1); }
+  });
+  document.querySelectorAll('.proj figure img').forEach(function (img) {
+    img.addEventListener('click', function () { openLightbox(img); });
+  });
+
+  (function () {
+    var tab = null, sub = null;
+    try { tab = localStorage.getItem('cv-tab'); sub = localStorage.getItem('cv-sub'); } catch (e) {}
+    var hash = location.hash.replace('#', '');
+    if (hash === 'resume' || hash === 'projects') { tab = hash; }
+    if (['flybyodoo', 'kioda', 'therabox'].indexOf(hash) !== -1) { tab = 'projects'; sub = hash; }
+    var tb = tab && document.querySelector('.tab-btn[data-tab="' + tab + '"]');
+    if (tb) { showTab(tab, tb); }
+    var sb = sub && document.querySelector('.sub-btn[data-sub="' + sub + '"]');
+    if (sb) { showSub(sub, sb); }
+  })();
+</script>
 </body>
 </html>
